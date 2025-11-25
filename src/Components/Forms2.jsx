@@ -8,9 +8,23 @@ function Form2(){
     const [password,setPassword]=useState("");
     const [email, setEmail]=useState("");
 
-    const submitFormHandler=(event)=>{
+    const submitFormHandler = (event) => {
         event.preventDefault();
-        console.log("Name: "+password+" Email: "+email);
+
+
+        if(!email.includes("@") && !(password.length > 6)) {
+            console.log("email: Invalid Email");
+            console.log("password: Invalid Password Length - Must be > 6 Characters");
+        } else if (!email.includes("@")) {
+            console.log("email: Invalid Email");
+            console.log("password: " + password);
+        } else if (!(password.length > 6)) {
+            console.log("email: " + email);
+            console.log("password: Invalid Password Length - Must be > 6 Characters");
+        } else {
+            console.log("email: " + email);
+            console.log("password: " + password);
+        }
     }
 
     return(
@@ -51,7 +65,7 @@ function Form2(){
 
 
                 <button onClick={submitFormHandler} type="submit" className={styles.log}> Login </button>
-
+<p className={styles.acc}>Not Registered Yet? Create an account</p>
                 </div>
               
             </form>
