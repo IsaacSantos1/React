@@ -1,0 +1,23 @@
+.nav{
+    background-color: #37cc64;
+    color:chocolate;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 32px;
+}
+
+ul{
+    list-style-type: none;
+    display:flex;
+    margin: 20px;
+    padding:0px;
+    overflow:hidden;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+li{
+    padding:4px;
+}
+
